@@ -8,7 +8,6 @@ export default defineConfig(({ mode }) => ({
   // Add the base property here!
   // It must be your repository name surrounded by slashes
   base: mode === "production" ? "/SDT/" : "/",
-
   server: {
     host: "::",
     port: 8080,
