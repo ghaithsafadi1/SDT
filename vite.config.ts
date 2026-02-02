@@ -1,12 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/SDT/" : "/", // Double check the "SDT" matches your repo name!
-  // ... rest of your code
+  // This tells Vite your site is hosted at /SDT/ instead of the root
+  base: mode === "production" ? "/SDT/" : "/",
+
   server: {
     host: "::",
     port: 8080,
@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  // Simplified plugins list to ensure a clean production build
   plugins: [react()],
   resolve: {
     alias: {
