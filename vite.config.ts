@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   // Add the base property here!
   // It must be your repository name surrounded by slashes
-  base: "/SDT/",
+  base: mode === "production" ? "/SDT/" : "/",
 
   server: {
     host: "::",
