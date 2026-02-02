@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import sdtLogo from "@/assets/sdt-logo.png";
+import sdtLogo from "../../assets/sdt-logo.png";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -57,7 +57,7 @@ const Navbar = () => {
             <img
               alt="Syrian Digital Trust"
               className="w-10 h-10 md:w-12 md:h-12 object-contain"
-              src="/lovable-uploads/70c44f0e-3170-4210-be9d-92dc2f39b702.png"
+              src={sdtLogo}
             />
             <span className="font-bold text-foreground text-sm md:text-base hidden sm:block"></span>
           </a>
