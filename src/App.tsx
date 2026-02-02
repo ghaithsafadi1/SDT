@@ -13,7 +13,10 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* The basename prop tells React Router that the app 
+          lives in a subfolder named /SDT/ 
+      */}
+      <BrowserRouter basename="/SDT">
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
