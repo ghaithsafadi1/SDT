@@ -18,8 +18,11 @@ const App = () => (
       */}
       <BrowserRouter basename="/SDT">
         <Routes>
+          {/* Use "index" or "/*" to ensure the home page captures the subfolder path */}
+          <Route index element={<Index />} />
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+          {/* The catch-all for anything else */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
